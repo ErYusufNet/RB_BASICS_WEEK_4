@@ -1,28 +1,24 @@
 *** Settings ***
 Resource    rentalstore.resource
-Library    Collections
-
+Library     Collections
 
 *** Variables ***
-&{equipment}    name=Buster Helmet    manufacturer=Buster    year=1969    size=Small    category=Cycling    model=Junior    color=Graphite    condition=E    skill_level=B    description=Coolest helmet for juniors by Buster
+&{new_gear}    name=Falcon Helmet    manufacturer=FalconTech    year=2021    size=Medium    category=Mountain Biking    model=Pro    color=Matte Black    condition=B    skill_level=A    description=High-performance helmet for mountain bikers
 
 *** Test Cases ***
-Add New Equipment
-    Open RentalStore Website
-    Login To RentalStore    timmy    timmy
+Add New Gear Item
+    Launch RentalStore Website
+    Authenticate RentalStore User    alice    alice123
     Click    //*[@id="add-equipment"]
-    # Two textboxes with id_name in this form.
-    Type Text    //*[@name="name"]    ${equipment}[name]
-    Type Text    //*[@id="id_manufacturer"]    ${equipment}[manufacturer]
-    Type Text    //*[@id="id_year"]    ${equipment}[year]
-    Type Text    //*[@id="id_model"]    ${equipment}[model]
-    Type Text    //*[@id="id_color"]    ${equipment}[color]
-    Type Text    //*[@id="id_year"]    ${equipment}[year]
-    Type Text    //*[@name="description"]    ${equipment}[description]
-    Select Options By    //*[@id="id_category"]    label    ${equipment}[category]
-    Select Options By    //*[@id="id_size"]    label    ${equipment}[size]
-
-    Click    input[name="condition"][value="${equipment}[condition]"]
-    Check Checkbox    input[name="skill_level"][value="${equipment}[skill_level]"]
-
+    # Fill in equipment details
+    Type Text    //*[@name="name"]            ${new_gear}[name]
+    Type Text    //*[@id="id_manufacturer"]   ${new_gear}[manufacturer]
+    Type Text    //*[@id="id_year"]           ${new_gear}[year]
+    Type Text    //*[@id="id_model"]          ${new_gear}[model]
+    Type Text    //*[@id="id_color"]          ${new_gear}[color]
+    Type Text    //*[@name="description"]     ${new_gear}[description]
+    Select Options By    //*[@id="id_category"]    label    ${new_gear}[category]
+    Select Options By    //*[@id="id_size"]        label    ${new_gear}[size]
+    Click    input[name="condition"][value="${new_gear}[condition]"]
+    Check Checkbox    input[name="skill_level"][value="${new_gear}[skill_level]"]
     Click Submit
