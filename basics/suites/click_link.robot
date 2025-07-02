@@ -1,25 +1,22 @@
 *** Settings ***
 Library    Browser
-Resource    rentalstore.resource
+Resource   rentalstore.resource
 
 *** Variables ***
-${login_page}    https://rentalstore.azurewebsites.net/
-
-
+${base_url}    https://rentalstore.azurewebsites.net/
 
 *** Test Cases ***
-Navbar Test
-    Open RentalStore Website
-    Login To RentalStore    timmy    timmy
-    Click All Links in Navbar
-
+Navigation Bar Link Test
+    Launch RentalStore Website
+    Authenticate RentalStore User    alice    alice123
+    Click All Navbar Links
 
 *** Keywords ***
-Click All Links in Navbar
-    [Documentation]    This test case demonstrates the use of for loops
-    @{nav_links}    Get Elements    css=nav a.nav-link
-    FOR    ${el}    IN    @{nav_links}
-        Click    ${el}
-        Log To Console    Clicked: ${el}
-        Sleep    2
+Click All Navbar Links
+    [Documentation]    Loops through all navbar links and clicks them one by one
+    @{links}    Get Elements    css=nav a.nav-link
+    FOR    ${link}    IN    @{links}
+        Click    ${link}
+        Log To Console    Clicked link element: ${link}
+        Sleep    2s
     END

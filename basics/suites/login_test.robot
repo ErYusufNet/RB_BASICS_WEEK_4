@@ -1,31 +1,32 @@
 *** Settings ***
 Resource    rentalstore.resource
-Library    String
-
+Library     String
 
 *** Variables ***
-${user_name}    new user
-${user_password}    new password
+${username}        uniqueUser
+${password}        securePass123
 
 *** Test Cases ***
-Create New Randomized User
-    Open RentalStore Website
-    Open Sign up Page
-    ${random_number}    Generate Random String    3    chars=[NUMBERS]
-    Sign up New RentalStore User    Kikka    ${random_number}nen    Kikka${random_number}    kikka.${random_number}@maili.fi    kikka${random_number}
-
+Register New Random User
+    Launch RentalStore Website
+    Navigate To Registration Page
+    ${rand_num}    Generate Random String    4    chars=[NUMBERS]
+    Register RentalStore User    Alex    ${rand_num}son    alex${rand_num}    alex${rand_num}@example.com    ${password}
 
 *** Keywords ***
-Open Sign up Page
+Launch RentalStore Website
+    # Burada senin Open Browser gibi bir keyword olabilir, eklenmeli
+
+Navigate To Registration Page
     Click    //*[@id="signup"]
 
-Sign up New RentalStore User
-    [Arguments]    ${first_name}    ${last_name}    ${user_name}    ${user_email}    ${$user_password}
-    Type Text    //*[@id="id_first_name"]    ${first_name}
-    Type Text    //*[@id="id_last_name"]    ${last_name}
-    Type Text    //*[@id="id_username"]    ${user_name}
-    Type Text    //*[@id="id_email"]    ${user_email}
-    Type Secret    //*[@id="id_password1"]    secret=$user_password
-    Type Secret    //*[@id="id_password2"]    secret=$user_password
+Register RentalStore User
+    [Arguments]    ${first}    ${last}    ${user}    ${email}    ${pass}
+    Type Text    //*[@id="id_first_name"]    ${first}
+    Type Text    //*[@id="id_last_name"]    ${last}
+    Type Text    //*[@id="id_username"]    ${user}
+    Type Text    //*[@id="id_email"]       ${email}
+    Type Secret  //*[@id="id_password1"]   secret=${pass}
+    Type Secret  //*[@id="id_password2"]   secret=${pass}
     Click Submit
     Sleep    5
