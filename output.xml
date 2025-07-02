@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-07-01T09:59:52.265905" rpa="false" schemaversion="5">
+<suite id="s1" name="Login1" source="C:\Users\yusuf\RB_BASICS_WEEK_4\basics\suites\login1.robot">
+<test id="s1-t1" name="Login Test" line="15">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-07-01T09:59:52.871536" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\yusuf\\RB_BASICS_WEEK_4\\browser\\traces\\temp\\a2afaa80-1cc6-4170-9dfa-c00d302e3836"}</msg>
+<msg time="2025-07-01T09:59:52.950815" level="INFO">Starting Browser process C:\Python\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:53065</msg>
+<msg time="2025-07-01T09:59:55.177939" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\yusuf\\RB_BASICS_WEEK_4\\browser\\traces\\temp\\a2afaa80-1cc6-4170-9dfa-c00d302e3836"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-07-01T09:59:52.870135" elapsed="2.308250"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-07-01T09:59:57.108698" level="INFO">Successfully initialized new page object and opened url: https://rentalstore.azurewebsites.net/</msg>
+<msg time="2025-07-01T09:59:57.108796" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-07-01T09:59:55.179239" elapsed="1.929738"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-01T09:59:57.110216" level="INFO">Clicks the element 'id=login'.</msg>
+<arg>id=login</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-01T09:59:57.109477" elapsed="0.181239"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-01T09:59:59.292679" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-01T09:59:57.291480" elapsed="2.001323"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-07-01T09:59:59.294353" level="INFO">Types the text 'timmy' in the given field.</msg>
+<arg>id=id_username</arg>
+<arg>${user}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-01T09:59:59.293162" elapsed="0.057813"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-07-01T09:59:59.353305" level="INFO">Types the text 'timmy' in the given field.</msg>
+<arg>id=id_password</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-07-01T09:59:59.351626" elapsed="0.055589"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-01T10:00:01.408856" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-01T09:59:59.407940" elapsed="2.001012"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-01T10:00:01.409622" level="INFO">Clicks the element '//form/button'.</msg>
+<arg>//form/button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-01T10:00:01.409170" elapsed="1.778313"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-01T10:00:03.268250" level="INFO">Waited for Element with selector id=logout at state visible</msg>
+<arg>id=logout</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-01T10:00:03.188248" elapsed="0.080420"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-01T10:00:06.270445" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-01T10:00:03.269473" elapsed="3.001098"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-07-01T10:00:06.664005" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-07-01T10:00:06.270942" elapsed="0.393449"/>
+</kw>
+<status status="PASS" start="2025-07-01T09:59:52.869230" elapsed="13.795790"/>
+</test>
+<status status="PASS" start="2025-07-01T09:59:52.267291" elapsed="14.419046"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login1" id="s1" pass="1" fail="0" skip="0">Login1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

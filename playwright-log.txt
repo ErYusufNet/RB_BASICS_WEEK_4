@@ -1,0 +1,63 @@
+{"level":30,"time":"2025-07-01T06:59:53.915Z","pid":27164,"hostname":"YusufEr","msg":"Listening on 127.0.0.1:53065"}
+(node:27164) DeprecationWarning: Calling start() is no longer necessary. It can be safely omitted.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+{"level":30,"time":"2025-07-01T06:59:54.238Z","pid":27164,"hostname":"YusufEr","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-07-01T06:59:55.173Z","pid":27164,"hostname":"YusufEr","msg":"Adding browser to stack: chromium, version: 138.0.7204.23"}
+{"level":30,"time":"2025-07-01T06:59:55.174Z","pid":27164,"hostname":"YusufEr","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-07-01T06:59:55.174Z","pid":27164,"hostname":"YusufEr","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-07-01T06:59:55.185Z","pid":27164,"hostname":"YusufEr","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-07-01T06:59:55.186Z","pid":27164,"hostname":"YusufEr","msg":"currentBrowser: [object Object]"}
+{"level":30,"time":"2025-07-01T06:59:55.213Z","pid":27164,"hostname":"YusufEr","msg":"Changed active context"}
+{"level":30,"time":"2025-07-01T06:59:56.352Z","pid":27164,"hostname":"YusufEr","msg":"Video path: undefined"}
+{"level":30,"time":"2025-07-01T06:59:56.352Z","pid":27164,"hostname":"YusufEr","msg":"Changed active page"}
+{"level":30,"time":"2025-07-01T06:59:57.105Z","pid":27164,"hostname":"YusufEr","msg":"End of node method newPage"}
+{"level":30,"time":"2025-07-01T06:59:57.111Z","pid":27164,"hostname":"YusufEr","msg":"Start of node method click"}
+{"level":30,"time":"2025-07-01T06:59:57.112Z","pid":27164,"hostname":"YusufEr","msg":"Strict mode is enabled, find Locator with id=login in page."}
+{"level":30,"time":"2025-07-01T06:59:57.289Z","pid":27164,"hostname":"YusufEr","msg":"End of node method click"}
+{"level":30,"time":"2025-07-01T06:59:59.295Z","pid":27164,"hostname":"YusufEr","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-07-01T06:59:59.296Z","pid":27164,"hostname":"YusufEr","msg":"Strict mode is enabled, find Locator with id=id_username in page."}
+{"level":30,"time":"2025-07-01T06:59:59.348Z","pid":27164,"hostname":"YusufEr","msg":"End of node method typeText"}
+{"level":30,"time":"2025-07-01T06:59:59.355Z","pid":27164,"hostname":"YusufEr","msg":"Start of node method typeText"}
+{"level":30,"time":"2025-07-01T06:59:59.356Z","pid":27164,"hostname":"YusufEr","msg":"Strict mode is enabled, find Locator with id=id_password in page."}
+{"level":30,"time":"2025-07-01T06:59:59.404Z","pid":27164,"hostname":"YusufEr","msg":"End of node method typeText"}
+{"level":30,"time":"2025-07-01T07:00:01.410Z","pid":27164,"hostname":"YusufEr","msg":"Start of node method click"}
+{"level":30,"time":"2025-07-01T07:00:01.410Z","pid":27164,"hostname":"YusufEr","msg":"Strict mode is enabled, find Locator with //form/button in page."}
+{"level":30,"time":"2025-07-01T07:00:03.184Z","pid":27164,"hostname":"YusufEr","msg":"End of node method click"}
+{"level":30,"time":"2025-07-01T07:00:03.194Z","pid":27164,"hostname":"YusufEr","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-07-01T07:00:03.194Z","pid":27164,"hostname":"YusufEr","msg":"Strict mode is enabled, find Locator with id=logout in page."}
+{"level":30,"time":"2025-07-01T07:00:03.266Z","pid":27164,"hostname":"YusufEr","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-07-01T07:00:06.272Z","pid":27164,"hostname":"YusufEr","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-07-01T07:00:06.287Z","pid":27164,"hostname":"YusufEr","msg":"Removed page=f437c4d1-b5b5-4e4c-8cd5-c454075c263c from context=21df5ba8-3af9-463c-80dd-f6feb284ec28 page stack"}
+{"level":30,"time":"2025-07-01T07:00:06.660Z","pid":27164,"hostname":"YusufEr","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Python\Lib\site-packages\Browser\wrapper\index.js:12226:15)
+    at PlaywrightServer.getActiveBrowser (C:\Python\Lib\site-packages\Browser\wrapper\index.js:13122:59)
+    at PlaywrightServer.setTimeout (C:\Python\Lib\site-packages\Browser\wrapper\index.js:13370:57)
+    at Object.onReceiveHalfClose (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-07-01T07:00:06.680Z","pid":27164,"hostname":"YusufEr","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-07-01T07:00:06.681Z","pid":27164,"hostname":"YusufEr","msg":"End of node method getBrowserCatalog"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Python\Lib\site-packages\Browser\wrapper\index.js:12226:15)
+    at PlaywrightServer.getActiveBrowser (C:\Python\Lib\site-packages\Browser\wrapper\index.js:13122:59)
+    at PlaywrightServer.setTimeout (C:\Python\Lib\site-packages\Browser\wrapper\index.js:13370:57)
+    at Object.onReceiveHalfClose (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1461:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:575:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:615:14)
+    at ServerHttp2Stream.<anonymous> (C:\Python\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:382:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1696:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+=============================================================
+{"level":30,"time":"2025-07-01T07:00:06.695Z","pid":27164,"hostname":"YusufEr","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-07-01T07:00:06.695Z","pid":27164,"hostname":"YusufEr","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-07-01T07:00:08.020Z","pid":27164,"hostname":"YusufEr","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-07-01T07:00:08.020Z","pid":27164,"hostname":"YusufEr","msg":"End of node method closeAllBrowsers"}
